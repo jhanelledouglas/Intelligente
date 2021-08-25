@@ -1,0 +1,20 @@
+<h2>{{instructor.first_name}}'s Departments</h2>
+<a class="button pop" href="/instructors/classes/new">Add New Department</a>
+<table cellspacing="0" cellpadding="0">
+	<thead>
+		<tr>
+			<th>Department Name</th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each instructor.classes}}
+			<tr>
+				<td>{{class_title}}</td>
+				<td><a class="button pop"href="/classes/{{class_id}}/lessons">View Courses</a></td>
+				<td><a class="button pop"href="/instructors/classes/{{class_id}}/lessons/new">Add Course</a></td>
+			</tr>
+		{{/each}}
+	</tbody>
+</table>

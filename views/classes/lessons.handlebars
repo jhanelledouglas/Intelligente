@@ -1,0 +1,24 @@
+<h2>{{class.title}}'s Courses</h2>
+
+<table cellspacing="0" cellpadding="0">
+	<thead>
+		<tr>
+			<th>Course Number</th>
+			<th>Course Title</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each class.lessons}}
+			<tr>
+				<td>{{lesson_number}}</td>
+				<td>{{lesson_title}}</td>
+				{{!-- <td><a href="/classes/{{../class._id}}/lessons/{{lesson_number}}">View Course</a></td> --}}
+				<td><a class="button pop" href="/classes/{{../class._id}}/lessons/{{lesson_number}}"> View Course</a></td>
+				
+			</tr>
+		{{/each}}
+		
+	</tbody>
+	
+</table>
