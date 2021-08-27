@@ -14,17 +14,19 @@
 <table cellspacing="0" cellpadding="0">
 	<thead>
 		<tr>
-			<th>Course ID</th>
-			<th>Course Name</th>
+			<th>Department ID</th>
+			<th>Department Name</th>
 			<th></th>
 		</tr>
 	</thead>
 	<tbody>
 		{{#each student.classes}}
 			<tr>
-				<td>{{class_id}}</td>
+				<td>{{_id}}</td>
+
 				<td>{{class_title}}</td>
-				<td><a class="button" href="/classes/{{class_id}}/lessons">View Course</a></td>
+				<td><a class="button" href="/classes/{{_id}}/lessons">View Course</a></td>
+				
 			</tr>
 		{{/each}}
 	</tbody>

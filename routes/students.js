@@ -22,6 +22,7 @@ router.get('/search', function(req, res, next) {
 router.post('/classes/register', function(req, res) {
     info = [];
     info['student_username'] = req.user.username;
+    info['class_id'] = req.body.class_id;
     info['class_title'] = req.body.class_title;
 
     Student.register(info, function(err, student) {

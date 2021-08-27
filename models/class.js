@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 
 // Class Schema
 var ClassSchema = mongoose.Schema({
+
     title: {
         type: String
     },
@@ -32,13 +33,13 @@ module.exports.getClassById = function(id, callback) {
 
 // Add Lesson
 module.exports.addLesson = function(info, callback) {
-    class_id = info['class_id'];
+    _id = info['class_id'];
     lesson_number = info['lesson_number'];
     lesson_title = info['lesson_title'];
     lesson_body = info['lesson_body'];
 
     Class.findByIdAndUpdate(
-        class_id, { $push: { "lessons": { lesson_number: lesson_number, lesson_title: lesson_title, lesson_body: lesson_body } } }, { safe: true, upsert: true },
+        _id, { $push: { "lessons": { lesson_number: lesson_number, lesson_title: lesson_title, lesson_body: lesson_body } } }, { safe: true, upsert: true },
         callback
     );
 }

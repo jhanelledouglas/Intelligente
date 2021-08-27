@@ -1,4 +1,4 @@
-<h2>{{class.title}}'s Courses</h2>
+<h2>{{class.result.title}}'s Courses</h2>
 
 <table cellspacing="0" cellpadding="0">
 	<thead>
@@ -13,8 +13,11 @@
 			<tr>
 				<td>{{lesson_number}}</td>
 				<td>{{lesson_title}}</td>
+				<td><a class="button orange" href="{{lesson_body}}"><i class="fa fa-music"></i> Click here to view course</a>
+				<input type="checkbox" id="check1" />
+				<label for="check1" class="inline">Complete</label></a></td
 				{{!-- <td><a href="/classes/{{../class._id}}/lessons/{{lesson_number}}">View Course</a></td> --}}
-				<td><a class="button pop" href="/classes/{{../class._id}}/lessons/{{lesson_number}}"> View Course</a></td>
+				{{!-- <td><a class="button pop" href="/classes/{{class._id}}/lessons/{{lesson_number}}"> View Course</a></td> --}}
 				
 			</tr>
 		{{/each}}

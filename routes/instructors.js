@@ -7,6 +7,7 @@ User = require('../models/user');
 
 router.get('/classes', function(req, res, next) {
     Instructor.getInstructorByUsername(req.user.username, function(err, instructor) {
+        console.log(req.user.username)
         if (err) throw err;
         res.render('instructors/classes', { instructor: instructor });
     });
