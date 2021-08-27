@@ -14,7 +14,7 @@ var LocalStrategy = require('passport-local'),
     Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/elearn');
+mongoose.connect('');
 var db = mongoose.connection;
 console.log('connected to DB!');
 async = require('async');
